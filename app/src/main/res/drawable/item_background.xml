@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- État pressé -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#F8C8DC"/> <!-- Couleur lors de la pression (survol) -->
+            <corners android:radius="12dp"/>
+        </shape>
+    </item>
+
+    <!-- État par défaut -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFFFF"/> <!-- Couleur par défaut -->
+            <corners android:radius="12dp"/>
+        </shape>
+    </item>
+</selector>

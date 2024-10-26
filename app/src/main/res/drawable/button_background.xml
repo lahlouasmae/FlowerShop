@@ -1,0 +1,23 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Etat quand le bouton est enfoncé -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFA07A" /> <!-- Couleur d'arrière-plan lorsqu'appuyé -->
+            <corners android:radius="8dp" />
+            <stroke
+                android:width="2dp"
+                android:color="#FF6347" /> <!-- Couleur du bord lorsqu'appuyé -->
+        </shape>
+    </item>
+
+    <!-- Etat par défaut du bouton -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFB6C1" /> <!-- Couleur d'arrière-plan par défaut -->
+            <corners android:radius="8dp" />
+            <stroke
+                android:width="2dp"
+                android:color="#FF69B4" /> <!-- Couleur du bord par défaut -->
+        </shape>
+    </item>
+</selector>
