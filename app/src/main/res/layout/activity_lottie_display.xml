@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Lottie Animation Fullscreen Background -->
+    <!-- Animation Lottie de chargement en plein écran -->
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieAnimationView"
         android:layout_width="match_parent"
@@ -13,6 +13,7 @@
         app:lottie_autoPlay="true"
         app:lottie_loop="true" />
 
+    <!-- Contenu principal superposé sur l'animation -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,7 +22,7 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <!-- Flower Name TextView -->
+        <!-- Texte pour indiquer à l'utilisateur de patienter -->
         <TextView
             android:id="@+id/please"
             android:layout_width="wrap_content"
@@ -37,7 +38,7 @@
             android:textSize="32sp"
             android:textStyle="bold" />
 
-        <!-- Flower Price TextView -->
+        <!-- Texte de chargement de la fleur -->
         <TextView
             android:id="@+id/charge"
             android:layout_width="wrap_content"
@@ -52,7 +53,6 @@
             android:textColor="#9C27B0"
             android:textSize="22sp"
             android:textStyle="italic" />
-
     </LinearLayout>
 
 </RelativeLayout>

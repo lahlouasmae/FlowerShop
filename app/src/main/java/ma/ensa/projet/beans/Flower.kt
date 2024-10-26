@@ -8,7 +8,8 @@ data class Flower(
     val price: Double,
     val animationRes: Int,
     val description: String,
-    val imageRes: Int
+    val imageRes: Int,
+
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString() ?: "",
@@ -16,6 +17,7 @@ data class Flower(
         parcel.readInt(),
         parcel.readString() ?: "",
         parcel.readInt()
+
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
@@ -24,6 +26,7 @@ data class Flower(
         parcel.writeInt(animationRes)
         parcel.writeString(description)
         parcel.writeInt(imageRes)
+
     }
 
     override fun describeContents(): Int = 0

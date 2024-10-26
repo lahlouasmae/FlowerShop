@@ -143,6 +143,7 @@ class FlowerListActivity : AppCompatActivity() {
             putExtra("flower_price", flower.price)
             putExtra("flower_description", flower.description)
             putExtra("animation_res", flower.animationRes)
+            putExtra("flower_image", flower.imageRes)  // Pass the image resource ID
         }
         startActivity(intent)
     }

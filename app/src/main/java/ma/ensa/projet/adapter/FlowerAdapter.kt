@@ -1,5 +1,6 @@
 package ma.ensa.projet
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,16 +36,16 @@ class FlowerAdapter(
         holder.flowerName.text = currentFlower.name
         holder.flowerPrice.text = "Prix pour un bouquet: ${currentFlower.price} Dhs"
 
-        // Assurez-vous d'assigner la bonne image
+
         holder.flowerImageView.setImageResource(currentFlower.imageRes)
+        Log.d("Adapter", "Setting image resource ID: ${currentFlower.imageRes} for ${currentFlower.name}")
+
 
         // Affichez ou masquez l'animation Lottie en fonction de la variable `showLottie`
-        if (showLottie) {
+
             holder.lottieAnimationView.visibility = View.VISIBLE
             holder.lottieAnimationView.setAnimation(R.raw.gift)
-        } else {
-            holder.lottieAnimationView.visibility = View.GONE
-        }
+
 
         holder.itemView.setOnClickListener {
             onItemClicked(currentFlower)

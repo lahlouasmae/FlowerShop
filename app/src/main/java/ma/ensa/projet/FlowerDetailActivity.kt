@@ -22,6 +22,8 @@ class FlowerDetailActivity : AppCompatActivity() {
         val flowerPrice = intent.getDoubleExtra("flower_price", 0.0)
         val animationRes = intent.getIntExtra("animation_res", -1)
         val flowerDescription = intent.getStringExtra("flower_description")
+        val flowerImageRes = intent.getIntExtra("flower_image", -1)  // Default to -1 if not found
+
 
         val flowerNameTextView = findViewById<TextView>(R.id.flowerNameTextView)
         val flowerPriceTextView = findViewById<TextView>(R.id.flowerPriceTextView)
@@ -30,11 +32,12 @@ class FlowerDetailActivity : AppCompatActivity() {
         favoriteButton = findViewById(R.id.favoriteButton)
 
         // Initialize currentFlower after ensuring flowerName is not null
-        if (flowerName != null && flowerDescription != null) {
-            currentFlower = Flower(flowerName, flowerPrice, animationRes, flowerDescription, R.drawable.ic_favorite)
+        if (flowerName != null && flowerDescription != null && flowerImageRes != -1) {
+            currentFlower = Flower(flowerName, flowerPrice, animationRes, flowerDescription, flowerImageRes)
         } else {
             return
         }
+
 
         flowerNameTextView.text = flowerName
         flowerPriceTextView.text = "Prix: $flowerPrice Dhs"

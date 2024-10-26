@@ -1,15 +1,16 @@
 package ma.ensa.projet.service
 
 import ma.ensa.projet.beans.Flower
+import ma.ensa.projet.dao.IDao
 
-class FlowerService {
+class FlowerService : IDao<Flower> {
     private val flowerList = mutableListOf<Flower>()
 
-    fun create(flower: Flower) {
-        flowerList.add(flower)
+    override fun create(item: Flower) {
+        flowerList.add(item)
     }
 
-    fun getAll(): List<Flower> {
+    override fun getAll(): List<Flower> {
         return flowerList
     }
 }

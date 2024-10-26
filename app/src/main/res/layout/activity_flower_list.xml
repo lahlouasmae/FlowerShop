@@ -5,9 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- Toolbar pour le titre de la page avec image et menu -->
-
-    <!-- Ajout d'un RecyclerView dans un CardView pour améliorer l'esthétique -->
+    <!-- Toolbar avec icône et titre de l'application -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -17,7 +15,7 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:titleTextColor="@android:color/white">
 
-        <!-- Image d'icône de l'application (par exemple une fleur) -->
+        <!-- Animation Lottie dans la Toolbar -->
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/flowerAnimationView"
             android:layout_width="68dp"
@@ -39,6 +37,7 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+    <!-- Section pour afficher l'icône et le nombre total de fleurs -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,7 +48,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp">
 
-        <!-- Image d'icône de fleur -->
+        <!-- Icône de fleur -->
         <ImageView
             android:id="@+id/flowerIcon"
             android:layout_width="24dp"
@@ -57,7 +56,7 @@
             android:src="@drawable/nbe"
             android:layout_marginEnd="8dp" />
 
-        <!-- TextView pour afficher le nombre total de fleurs -->
+        <!-- Texte affichant le nombre total de fleurs -->
         <TextView
             android:id="@+id/itemCountTextView"
             android:layout_width="wrap_content"
@@ -66,6 +65,7 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
+        <!-- Bouton pour accéder à la liste des favoris -->
         <Button
             android:id="@+id/favoriteIcon"
             android:layout_width="wrap_content"
@@ -77,12 +77,10 @@
             android:textColor="#0E0E0E"
             android:layout_marginLeft="10dp"
             android:textSize="14sp"
-            android:textStyle="bold"/>
-
-
+            android:textStyle="bold" />
     </LinearLayout>
 
-
+    <!-- RecyclerView intégré dans un CardView pour l'esthétique -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="0dp"

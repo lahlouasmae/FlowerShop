@@ -4,17 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Lottie Animation Fullscreen Background -->
+    <!-- Animation Lottie en arrière-plan en plein écran -->
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieAnimationView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:lottie_rawRes="@raw/f_animation"
-    app:lottie_autoPlay="true"
-    app:lottie_loop="true"
-    android:scaleType="centerCrop" /> <!-- S'assure que l'animation remplit l'écran -->
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:scaleType="centerCrop" /> <!-- Assure que l'animation remplit l'écran -->
 
-    <!-- Overlay Content -->
+    <!-- Contenu superposé -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,35 +22,39 @@
         android:gravity="center_horizontal"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="100dp">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="10dp">
-        <!-- Title Text -->
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/flowerAnimationView2"
-            android:layout_width="68dp"
-            android:layout_height="68dp"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/fav" />
-        <TextView
-            android:id="@+id/titleText"
-            android:layout_width="wrap_content"
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="FlowerShop"
-            android:textSize="32sp"
-            android:textColor="#FFFFFF"
-            android:fontFamily="sans-serif-medium"
-            android:textStyle="bold"
-            android:layout_marginTop="15dp"/>
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp">
 
-    </LinearLayout>
+            <!-- Titre de l'application avec animation Lottie -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/flowerAnimationView2"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/fav" />
 
-        <!-- Description Text -->
+            <!-- Texte du titre de l'application -->
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FlowerShop"
+                android:textSize="32sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"/>
+
+        </LinearLayout>
+
+        <!-- Texte de description de l'application -->
         <TextView
             android:id="@+id/descriptionText"
             android:layout_width="wrap_content"
@@ -61,7 +65,7 @@
             android:gravity="center"
             android:layout_marginBottom="20dp" />
 
-        <!-- Button -->
+        <!-- Bouton d'action principal -->
         <Button
             android:id="@+id/recipesButton"
             android:layout_width="wrap_content"

@@ -22,6 +22,7 @@ class FavoriteListActivity : AppCompatActivity() {
         // Vérifiez les données pour chaque élément dans la liste des favoris
         for (flower in favoriteList) {
             Log.d("FavoriteListActivity", "Flower in favorites: ${flower.name}, ImageRes: ${flower.imageRes}")
+
         }
 
         val favoriteRecyclerView = findViewById<RecyclerView>(R.id.favoriteRecyclerView)
@@ -39,8 +40,10 @@ class FavoriteListActivity : AppCompatActivity() {
                 putExtra("animation_res", flower.animationRes)
                 putExtra("flower_image", flower.imageRes)  // Assurez-vous de transmettre l'image
             }
+            Log.d("FavoriteListActivity", "Flower in favorites: ${flower.name}, ImageRes: ${flower.imageRes}")
             startActivity(intent)
         }, showLottie = false) // On ne montre pas les animations Lottie dans la liste des favoris
 
     }
+
 }

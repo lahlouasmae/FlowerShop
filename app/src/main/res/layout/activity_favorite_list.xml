@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:padding="0dp">
 
-
+    <!-- Barre d'outils (Toolbar) avec une animation Lottie et le titre de l'application -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="919dp"
@@ -16,14 +16,15 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:titleTextColor="@android:color/white">
 
+        <!-- Animation Lottie dans la Toolbar -->
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/flowerAnimationView2"
             android:layout_width="68dp"
             android:layout_height="68dp"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:lottie_rawRes="@raw/menu"
-            />
+            app:lottie_rawRes="@raw/menu" />
+
         <!-- Titre de l'application -->
         <TextView
             android:id="@+id/appName"
@@ -37,6 +38,7 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+    <!-- Section affichant le nombre total de fleurs -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,13 +49,15 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp">
 
+        <!-- Icône de fleur -->
         <ImageView
             android:id="@+id/flowerIcon"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/nbe"
+            android:src="@drawable/ic_favorite"
             android:layout_marginEnd="8dp" />
 
+        <!-- Texte affichant le nombre de fleurs -->
         <TextView
             android:id="@+id/numFavoritesTextView"
             android:layout_width="wrap_content"
@@ -63,6 +67,7 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+    <!-- Liste des fleurs et favoris affichée dans un RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/favoriteRecyclerView"
         android:layout_width="match_parent"
