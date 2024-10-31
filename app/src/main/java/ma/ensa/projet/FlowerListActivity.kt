@@ -61,7 +61,6 @@ class FlowerListActivity : AppCompatActivity() {
             Flower("Lavande", 210.0, R.raw.lavande, "Une fleur emblématique du sud de la France, reconnue pour sa couleur violette et son parfum apaisant.", R.drawable.lavande),
             Flower("Orchide", 600.0, R.raw.orchide, "Une fleur exotique connue pour sa beauté élégante et ses formes délicates", R.drawable.orchide),
             Flower("Rose Noire", 500.0, R.raw.rosenoire, "Une fleur mystérieuse et rare, souvent associée à l'élégance, la passion intense, et le mystère.", R.drawable.rosenoir)
-
         )
 
         // Copie de la liste complète pour le filtrage
